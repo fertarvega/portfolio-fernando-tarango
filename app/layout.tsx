@@ -14,11 +14,6 @@ import Link from 'next/link'
 config.autoAddCss = false
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
-  title: 'Fernando Tarango Portfolio',
-  description: 'Portfolio',
-}
-
 export default function RootLayout({
   children,
 }: {
