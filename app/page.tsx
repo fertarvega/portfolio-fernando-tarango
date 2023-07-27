@@ -2,7 +2,6 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faFolder } from '@fortawesome/free-solid-svg-icons'
 import { faFolder } from '@fortawesome/free-regular-svg-icons'
 
 export default function Home() {
