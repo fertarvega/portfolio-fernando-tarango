@@ -3,22 +3,39 @@ import styles from './page.module.css'
 import React from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFile } from '@fortawesome/free-regular-svg-icons'
-import { faBriefcase } from '@fortawesome/free-solid-svg-icons'
+import { faClipboard, faFile, faFilePdf, faKeyboard } from '@fortawesome/free-regular-svg-icons'
 import { Footer } from '../components/Footer';
+import CustomIcon from '../components/CustomIcon';
+
+interface CustomIconInterface {
+  iconUrl: string;
+  borderIconHeighSize: number;
+  borderIconWidthSize: number;
+  iconHeighSize: number;
+}
 
 export default function Resume() {
+
+  const technologiesIcons = [
+    {iconUrl: 'figma.svg', borderIconHeighSize: 20, borderIconWidthSize: 20, iconHeighSize: 8 },
+    {iconUrl: 'react.svg', borderIconHeighSize: 20, borderIconWidthSize: 20, iconHeighSize: 8 },
+    {iconUrl: 'mongodb.svg', borderIconHeighSize: 20, borderIconWidthSize: 20, iconHeighSize: 8 },
+    {iconUrl: 'mysql.svg', borderIconHeighSize: 20, borderIconWidthSize: 20, iconHeighSize: 8 }
+  ]
+  
   return (
     <>
-      <div className="text-3xl font-medium text-black mb-5">
-        <FontAwesomeIcon icon={faFile} className='mr-3' />
-        Resume
+      <div className="text-3xl font-medium text-black mb-5 flex items-center">
+        <FontAwesomeIcon icon={faFile} className='mr-3 text-orange-600' />
+        <h3>Resume</h3>
       </div>
       <div className='mb-5 grid grid-cols-3'>
         <div className='col-span-2'>
           <p className='text-lg mb-5'>I consider myself a person who has no limits for learning. Learning about different things, cultures, technologies, people and ways of working is something I really enjoy. My goal is to become a frontend developer.</p>
           <a href='/CV - Fernando Tarango.pdf' download 
-          className='px-7 py-2 text-md text-purple-600 font-semibold rounded-lg border border-purple-400 hover:text-white hover:bg-purple-500 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2'>Download CV</a>
+          className='px-7 py-2 text-md text-orange-600 font-semibold rounded-lg border border-orange-400 hover:text-white hover:bg-orange-400 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-offset-2'>
+          <FontAwesomeIcon icon={faFilePdf} className='hover:text-white mr-2 text-orange-600' />
+            Download CV</a>
         </div>
         <div className="flex flex-wrap justify-center">
           <div className="w-48">
@@ -26,11 +43,11 @@ export default function Resume() {
           </div>
         </div>
       </div>
-      <hr className='mt-16 mb-10' />
+      <hr className='mt-14 mb-10' />
       <div className='mb-12'>
-        <div className="text-3xl font-medium text-black mb-5">
-          <FontAwesomeIcon icon={faBriefcase} className='mr-3' />
-          Work Experience
+        <div className="text-3xl font-medium text-black mb-5 flex items-center">
+          <FontAwesomeIcon icon={faClipboard} className='mr-3 text-orange-600' />
+          <h3>Work Experience</h3>
         </div>
         <ol className="border-l border-neutral-300 dark:border-neutral-500">
           <li>
@@ -87,6 +104,23 @@ export default function Resume() {
             </div>
           </li>
         </ol>
+      </div>
+      <hr className='mt-14 mb-10' />
+      <div>
+        <div className="text-3xl font-medium text-black mb-5 flex items-center">
+          <FontAwesomeIcon icon={faKeyboard} className='mr-3 text-orange-600' />
+          <h3>Languages and Technologies</h3>
+        </div>
+        <div className="flex flex-wrap justify-center mt-10">
+          {technologiesIcons.map(icon => 
+            <CustomIcon 
+              key={icon.iconUrl}
+              iconUrl={icon.iconUrl} 
+              borderIconWidthSize={icon.borderIconWidthSize} 
+              borderIconHeighSize={icon.borderIconHeighSize} 
+              iconHeighSize={icon.iconHeighSize}></CustomIcon>
+          )}
+        </div>
       </div>
       <Footer/>
     </>

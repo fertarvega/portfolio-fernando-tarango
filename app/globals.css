@@ -27,6 +27,14 @@ body {
   --button-primary-color: white;
 }
 
+.bg-white{
+  background-color: var(--button-primary-bg-color);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  color: var(--button-primary-color);
+}
+
 .button-primary{
   padding: 5px;
   border-radius: 5px;
