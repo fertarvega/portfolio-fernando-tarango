@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClipboard, faFile, faFilePdf, faKeyboard } from '@fortawesome/free-regular-svg-icons'
 import { Footer } from '../components/Footer';
-import CustomIcon from '../components/CustomIcon';
+import TechnologiesIcon from '../components/TechnologiesIcon';
 
 interface CustomIconInterface {
   iconUrl: string;
@@ -112,13 +112,13 @@ export default function Resume() {
           <h3>Languages and Technologies</h3>
         </div>
         <div className="flex flex-wrap justify-center mt-10">
-          {technologiesIcons.map(icon => 
-            <CustomIcon 
-              key={icon.iconUrl}
-              iconUrl={icon.iconUrl} 
-              borderIconWidthSize={icon.borderIconWidthSize} 
-              borderIconHeighSize={icon.borderIconHeighSize} 
-              iconHeighSize={icon.iconHeighSize}></CustomIcon>
+          {technologiesIcons.map((icon, index) => 
+            <TechnologiesIcon 
+            key={index}
+            iconUrl={icon.iconUrl} 
+            borderIconWidthSize={icon.borderIconWidthSize} 
+            borderIconHeighSize={icon.borderIconHeighSize} 
+            iconHeighSize={icon.iconHeighSize}></TechnologiesIcon>
           )}
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import CustomIcon from './CustomIcon';
+import TechnologiesIcon from './TechnologiesIcon';
 
 interface ProjectCard {
     projectInfo: {
@@ -22,19 +22,19 @@ const ProjectCard: React.FC<ProjectCard> = ({ projectInfo }) => {
             <div className="flex flex-wrap justify-center mt-5">
             {projectInfo.icons.map((icon) => 
                 icon.iconUrl == 'unity.svg' ? 
-                <CustomIcon 
+                <TechnologiesIcon 
                 key={icon.iconUrl} 
                 iconUrl={icon.iconUrl} 
                 borderIconWidthSize={icon.borderIconWidthSize} 
                 borderIconHeighSize={icon.borderIconHeighSize} 
                 iconHeighSize={icon.iconHeighSize}
-                padding='pr-1'></CustomIcon> :
-                <CustomIcon 
+                ></TechnologiesIcon> :
+                <TechnologiesIcon 
                 key={icon.iconUrl} 
                 iconUrl={icon.iconUrl} 
                 borderIconWidthSize={icon.borderIconWidthSize} 
                 borderIconHeighSize={icon.borderIconHeighSize} 
-                iconHeighSize={icon.iconHeighSize}></CustomIcon>
+                iconHeighSize={icon.iconHeighSize}></TechnologiesIcon>
             )}
             </div>
         </div>

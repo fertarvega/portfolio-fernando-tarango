@@ -1,9 +1,6 @@
-import Image from 'next/image'
-import styles from './page.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFolder } from '@fortawesome/free-regular-svg-icons'
 import { Footer } from './components/Footer'
-import CustomIcon from './components/CustomIcon'
 import ProjectCard from './components/ProjectCard'
 
 export default function Home() {
