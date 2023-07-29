@@ -1,6 +1,6 @@
 export function Footer(){
     return(
-        <footer className="m-4">
+        <footer className="mx-4 mb-4 mt-10">
             <div className="w-full mx-2 max-w-screen-xl p-4 md:flex md:items-center md:justify-center">
             <span className="text-lg font-medium text-gray-500 sm:text-center">Fernando Tarango</span>
             <a href='https://www.linkedin.com/in/fertarvega/' className='cursor-pointer'>

@@ -28,13 +28,14 @@ const ProjectCard: React.FC<ProjectCard> = ({ projectInfo }) => {
                 borderIconWidthSize={icon.borderIconWidthSize} 
                 borderIconHeighSize={icon.borderIconHeighSize} 
                 iconHeighSize={icon.iconHeighSize}
-                ></TechnologiesIcon> :
+                isHome={true}></TechnologiesIcon> :
                 <TechnologiesIcon 
                 key={icon.iconUrl} 
                 iconUrl={icon.iconUrl} 
                 borderIconWidthSize={icon.borderIconWidthSize} 
                 borderIconHeighSize={icon.borderIconHeighSize} 
-                iconHeighSize={icon.iconHeighSize}></TechnologiesIcon>
+                iconHeighSize={icon.iconHeighSize}
+                isHome={true}></TechnologiesIcon>
             )}
             </div>
         </div>
