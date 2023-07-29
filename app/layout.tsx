@@ -24,16 +24,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ThemeContextWrapper>
-        <body className='container max-w-screen-lg mx-auto px-5'>
+        <body className='container lg:max-w-screen-lg mx-auto px-5 selection:bg-pink-300'>
           <div className='max-w-sm mx-auto text-center mt-12 mb-12'>
             <Link href="/">
-              <button className='ml-5 mr-5 px-4 py-1 text-md text-purple-600 font-semibold rounded-lg border border-purple-200 hover:text-white hover:bg-purple-500 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2'>Inicio</button>
+              <button className='ml-5 mr-5 px-4 py-1 text-md text-purple-600 font-semibold rounded-lg border border-purple-200 hover:text-white hover:bg-purple-500 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2'>Home</button>
             </Link>
             <Link href="/resume">
               <button className='ml-5 mr-5 px-4 py-1 text-md text-purple-600 font-semibold rounded-lg border border-purple-200 hover:text-white hover:bg-purple-500 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2'>Resume</button>
             </Link>
             
-            <ThemeContext.Consumer>
+            {/* <ThemeContext.Consumer>
               {({ changeTheme }) => (
                 <>
                   <button
@@ -51,7 +51,7 @@ export default function RootLayout({
                 
                 </>
               )}
-              </ThemeContext.Consumer>
+              </ThemeContext.Consumer> */}
             </div>
           {children}
           </body>
